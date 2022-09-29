@@ -1,0 +1,44 @@
+name: 'bem-te-vi'
+description: 'Birthday notification based on contacts stored in CardDAV'
+inputs:
+  webdav_server:
+    description: 'Server domain or subdomain url'
+    required: true
+    default: ''
+  webdav_username:
+    description: 'Username used in DAV service'
+    required: true
+    default: ''
+  webdav_password:
+    description: 'Password used in DAV service'
+    required: true
+    default: ''
+  webdav_addressbook:
+    description: 'Path representing the address book in the DAV service'
+    required: true
+    default: ''
+  webhook_url:
+    description: 'Slack compatible webhook'
+    required: true
+    default: ''
+  date_layout:
+    description: 'Date parse mask'
+    required: false
+  bot_name:
+    description: 'The name of the bot on chat'
+    required: false
+  icon_url:
+    description: 'Avatar of bot'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    - WEBDAV_SERVER: ${{ inputs.webdav_server }}
+    - WEBDAV_USERNAME: ${{ inputs.webdav_username }}
+    - WEBDAV_PASSWORD: ${{ inputs.webdav_password }}
+    - WEBDAV_ADRESSBOOK: ${{ inputs.webdav_addressbook }}
+    - WEBHOOK_URL: ${{ inputs.webhook_url }}
+    - DATE_LAYOUT: ${{ inputs.date_layout }}
+    - BOT_NAME: ${{ inputs.bot_name }}
+    - ICON_URL: ${{ inputs.icon_url }}
