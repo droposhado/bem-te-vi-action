@@ -34,11 +34,11 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    - WEBDAV_SERVER: ${{ inputs.webdav_server }}
-    - WEBDAV_USERNAME: ${{ inputs.webdav_username }}
-    - WEBDAV_PASSWORD: ${{ inputs.webdav_password }}
-    - WEBDAV_ADRESSBOOK: ${{ inputs.webdav_addressbook }}
-    - WEBHOOK_URL: ${{ inputs.webhook_url }}
-    - DATE_LAYOUT: ${{ inputs.date_layout }}
-    - BOT_NAME: ${{ inputs.bot_name }}
-    - ICON_URL: ${{ inputs.icon_url }}
+    WEBDAV_SERVER: ${{ inputs.webdav_server }}
+    WEBDAV_USERNAME: ${{ inputs.webdav_username }}
+    WEBDAV_PASSWORD: ${{ inputs.webdav_password }}
+    WEBDAV_ADRESSBOOK: ${{ inputs.webdav_addressbook }}
+    WEBHOOK_URL: ${{ inputs.webhook_url }}
+    DATE_LAYOUT: ${{ inputs.date_layout }}
+    BOT_NAME: ${{ inputs.bot_name }}
+    ICON_URL: ${{ inputs.icon_url }}
