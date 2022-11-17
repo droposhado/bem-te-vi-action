@@ -4,37 +4,7 @@ This action is an easier and more reusable way to use the [bem-te-vi](https://gi
 
 ## Inputs
 
-### `webdav_server`
-
-**Required** Server domain or subdomain url. Default `""`.
-
-### `webdav_username`
-
-**Required** Username used in DAV service. Default `""`.
-
-### `webdav_password`
-
-**Required** Password used in DAV service. Default `""`.
-    
-### `webdav_addressbook`
-
-**Required** Path representing the address book in the DAV service. Default `""`.
-
-### `webhook_url`
-
-**Required** Slack compatible webhook. Default `""`.
-
-### `date_layout`
-
-**Required** Date parse mask. Default `2006-01-02T15:04:05Z`.
-
-### `bot_name`
-
-**Optional** The name of the bot on chat. Default `Bot defined`.
-
-### `icon_url`
-
-**Optional** Avatar of bot. Default `Bot defined or service default user icon`.
+See [action.yml](action.yml)
 
 ## Example usage
 
