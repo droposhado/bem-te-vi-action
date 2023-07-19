@@ -1,6 +1,10 @@
 name: 'bem-te-vi'
 description: 'Birthday notification based on contacts stored in CardDAV'
 inputs:
+  btv_debug:
+    description: 'Show sensitive info about connection and other relevant things'
+    required: false
+    default: ''
   webdav_server:
     description: 'Server domain or subdomain url'
     required: true
@@ -34,6 +38,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
+    BTV_DEBUG: ${{ inputs.btv_debug }}
     WEBDAV_SERVER: ${{ inputs.webdav_server }}
     WEBDAV_USERNAME: ${{ inputs.webdav_username }}
     WEBDAV_PASSWORD: ${{ inputs.webdav_password }}
