@@ -36,7 +36,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://quay.io/droposhado/bem-te-vi:latest'
   env:
     BTV_DEBUG: ${{ inputs.btv_debug }}
     WEBDAV_SERVER: ${{ inputs.webdav_server }}
